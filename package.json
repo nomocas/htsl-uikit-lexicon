@@ -32,8 +32,8 @@
   "author": "Gilles Coomans",
   "license": "MIT",
   "dependencies": {
-    "nomocas-webutils": "^0.0.7",
-    "mini-wysiwyg": "^0.1.3"
+    "htsl-lexicon": "^0.2.4",
+    "nomocas-webutils": "^0.0.7"
   },
   "devDependencies": {
     "assert": "^1.4.1",
