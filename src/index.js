@@ -1,8 +1,40 @@
 /*
-* @Author: gilles
-* @Date:   2017-03-24 16:54:25
-* @Last Modified by:   gilles
-* @Last Modified time: 2017-03-25 14:58:08
-*/
+ * @Author: Gilles Coomans
+ */
 
-'use strict';
+import htmlLexicon from 'htsl-lexicon';
+
+export default htmlLexicon.createDialect('uikit')
+	.addCompounds((h) => {
+		return {
+			icon(type, templ) {
+				return this.i(h.class('fa').class('fa-' + type), templ);
+			},
+
+			background(url, backgroundSize = 'cover') {
+				return this.style('background', 'url(' + url + ') no-repeat center center')
+					.style('backgroundSize', backgroundSize);
+			},
+
+			thumbnail(src, alt, templ) {
+				return this.img(src,
+					h.class('thumbnail')
+					.attr('alt', alt || 'image with no alternate text'),
+					templ
+				);
+			},
+
+			roundedThumbnail(src, alt, templ) {
+				return this.img(src,
+					h.classes('thumbnail rounded')
+					.attr('alt', alt || 'image with no alternate text'),
+					templ
+				);
+			},
+
+			primaryButton(title, templ) {
+				return this.button(title, templ);
+			}
+		};
+	});
+
