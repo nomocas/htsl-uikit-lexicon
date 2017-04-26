@@ -1,50 +1,15 @@
-# ES6 module boilerplate with full ES6 test suits and coverage
+# htsl-uikit-lexicon
 
-Largely inspired from https://istanbul.js.org/docs/tutorials/es2015/ and https://github.com/bcoe/es2015-coverage. Added : rollup bundling and karma runner + clean and complete.
+[![Travis branch](https://img.shields.io/travis/nomocas/htsl-uikit-lexicon/master.svg)](https://travis-ci.org/nomocas/htsl-uikit-lexicon)
+[![bitHound Overall Score](https://www.bithound.io/github/nomocas/htsl-uikit-lexicon/badges/score.svg)](https://www.bithound.io/github/nomocas/htsl-uikit-lexicon)
+[![bitHound Dependencies](https://www.bithound.io/github/nomocas/htsl-uikit-lexicon/badges/dependencies.svg)](https://www.bithound.io/github/nomocas/htsl-uikit-lexicon/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/nomocas/htsl-uikit-lexicon/badges/devDependencies.svg)](https://www.bithound.io/github/nomocas/htsl-uikit-lexicon/master/dependencies/npm)
+[![npm](https://img.shields.io/npm/v/htsl-uikit-lexicon.svg)]()
+[![licence](https://img.shields.io/npm/l/htsl-uikit-lexicon.svg)]()
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+<!-- [![npm-downloads](https://img.shields.io/npm/dm/htsl-uikit-lexicon.svg)]() -->
 
-- ES6 sources
-- transpiled with [babel](https://babeljs.io) (to dist/es5/*)
-- bundled with [rollup](https://github.com/rollup/rollup) (to dist/bundles/*)
-- ES6 tests with [mocha](https://mochajs.org) and [chai](http://chaijs.com/) (runned directly from es6 with [babel-register](https://babeljs.io/docs/usage/babel-register/))
-- [karma](http://karma-runner.github.io) runner with on-the-fly rollup/babel bundling
-- Code coverage with [istanbul](https://istanbul.js.org/) and [nyc](https://github.com/istanbuljs/nyc) directly from ES6 tests and sources (no bundle)
-
-- [eslint](http://eslint.org) ES6 base config for src and test
-
-## Usage
-
-clone this repo then :
-
-```
-> npm i
-```
-
-then :
-
-- build : `> npm run build`
-- test :  `> mocha` or `> npm test`
-- karma : `> npm run karma`
-- cover : `> npm run cover`
-- es5-watch : `> npm run es5-watch`
-- bundles-watch : `> npm run bundles-watch`
-
-
-Don't forget to change :
-- package.json : infos (Module name, author, etc)
-- karma.conf.js and rollup.config.js : change __MY__PROJECT__ to the UMD module name of your choice
-
-## Produced outputs
-
-- dist/es5/* : commonjs unbundled files (transpiled with babel)
-- dist/bundles/index.js : umd module
-- dist/bundles/index.min.js : umd module minified with uglifyjs
-- dist/bundles/index.mjs : ES module
-
-## Bundling with third party libs
-
-If you want to do so (for UMD modules either for distribution or karma tests), you should use :
-- [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve)
-- [rollup-plugin-commonjs](https://github.com/rollup/rollup-plugin-commonjs)
+Uikit base for HTSL lexicon.
 
 
 ## Licence
