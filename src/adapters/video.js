@@ -2,12 +2,12 @@
  * @Author: gilles
  * @Date:   2017-03-22 18:48:00
  * @Last Modified by:   Gilles Coomans
- * @Last Modified time: 2017-04-26 12:24:49
+ * @Last Modified time: 2017-04-26 13:12:15
  */
 /* global $ */
 
 import fitVids from 'nomocas-webutils/lib/fitvids';
-import embed from 'clean-embed-video';
+const embed = require('clean-embed-video');
 
 export default () => {
 	return {

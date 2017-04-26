@@ -3,12 +3,12 @@
  * @Author: gilles
  * @Date:   2017-03-22 18:49:09
  * @Last Modified by:   Gilles Coomans
- * @Last Modified time: 2017-04-26 12:25:31
+ * @Last Modified time: 2017-04-26 13:11:10
  */
 
 import plateform from 'nomocas-webutils/lib/plateform';
 import { insertHTML } from 'nomocas-webutils/lib/dom-utils';
-import Wysiwyg from 'mini-wysiwyg';
+const Wysiwyg = require('mini-wysiwyg');
 
 export default () => {
 	return {
