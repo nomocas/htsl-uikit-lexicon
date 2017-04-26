@@ -2,16 +2,15 @@
 /*
  * @Author: gilles
  * @Date:   2017-03-22 18:49:09
- * @Last Modified by:   gilles
- * @Last Modified time: 2017-03-27 17:17:29
+ * @Last Modified by:   Gilles Coomans
+ * @Last Modified time: 2017-04-26 12:25:31
  */
 
-import uikitLexicon from '../uikit-lexicon';
 import plateform from 'nomocas-webutils/lib/plateform';
 import { insertHTML } from 'nomocas-webutils/lib/dom-utils';
 import Wysiwyg from 'mini-wysiwyg';
 
-export default uikitLexicon.addCompounds(() => {
+export default () => {
 	return {
 		wysiwyg(value, editMode, placeholder, onUpdate) {
 			if (plateform.isServer)
@@ -50,5 +49,5 @@ export default uikitLexicon.addCompounds(() => {
 			});
 		}
 	};
-});
+};
 

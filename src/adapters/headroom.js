@@ -1,11 +1,10 @@
 /*
  * @Author: gilles
  * @Date:   2017-03-22 18:46:49
- * @Last Modified by:   gilles
- * @Last Modified time: 2017-03-22 19:16:12
+ * @Last Modified by:   Gilles Coomans
+ * @Last Modified time: 2017-04-26 12:25:41
  */
 
-import uikitLexicon from '../uikit-lexicon';
 import plateform from 'nomocas-webutils/lib/plateform';
 
 // --buddyfile: ../scss/adapters/_headroom.scss
@@ -15,7 +14,7 @@ let Headroom;
 if (plateform.isBrowser)
 	Headroom = require('headroom.js/dist/headroom');
 
-export default uikitLexicon.addCompounds((h) => {
+export default (h) => {
 	return {
 		headroom(opt, containerScroller, content) {
 			return this.header(
@@ -40,5 +39,5 @@ export default uikitLexicon.addCompounds((h) => {
 			);
 		}
 	};
-});
+};
 

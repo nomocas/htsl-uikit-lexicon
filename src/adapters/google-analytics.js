@@ -1,5 +1,4 @@
 /* global ga */
-import uikitLexicon from '../uikit-lexicon';
 const gaStart = "<script>" +
 	"(function(b, o, i, l, e, r) {" +
 	"    b.GoogleAnalyticsObject = l;" +
@@ -21,15 +20,14 @@ function gaEvent(category, type, data) {
 		ga('send', 'event', category, type, data);
 }
 
-uikitLexicon.addCompounds(() => {
-	return {
-		gascript(key) {
-			return this.raw(gaStart + key + gaEnd);
-		}
-	};
-});
-
-export {
+export default {
+	compound() {
+		return {
+			gascript(key) {
+				return this.raw(gaStart + key + gaEnd);
+			}
+		};
+	},
 	gaEvent
 };
 

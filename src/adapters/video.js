@@ -1,21 +1,19 @@
 /*
  * @Author: gilles
  * @Date:   2017-03-22 18:48:00
- * @Last Modified by:   gilles
- * @Last Modified time: 2017-03-24 17:07:19
+ * @Last Modified by:   Gilles Coomans
+ * @Last Modified time: 2017-04-26 12:24:49
  */
 /* global $ */
 
-import uikitLexicon from '../uikit-lexicon';
 import fitVids from 'nomocas-webutils/lib/fitvids';
+import embed from 'clean-embed-video';
 
-const embed = require('../../vendor/embed-video.js');
-
-uikitLexicon.addCompounds(() => {
+export default () => {
 	return {
 		fitVids(options) {
 			return this
-				.dom((context, node) => {
+				.onDom((node) => {
 					setTimeout(() => {
 						fitVids($(node), $, options);
 					}, 100);
@@ -25,5 +23,5 @@ uikitLexicon.addCompounds(() => {
 			return this.html(embed(url)).fitVids(options);
 		}
 	};
-});
+};
 
