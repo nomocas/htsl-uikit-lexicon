@@ -14,7 +14,8 @@
     "test": "mocha",
     "karma": "karma start",
     "cover": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text mocha test/*.js",
-    "prepublish": "npm test"
+    "prepublish": "npm test",
+    "release": "standard-version"
   },
   "nyc": {
     "require": [
@@ -59,7 +60,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-watch": "^3.2.2",
+    "standard-version": "^4.0.0",
     "uglify-js": "^2.7.5"
   }
 }
-
