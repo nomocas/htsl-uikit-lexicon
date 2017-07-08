@@ -34,7 +34,7 @@
   "dependencies": {
     "clean-embed-video": "git+https://github.com/nomocas/clean-embed-video.git#master",
     "htsl-lexicon": "^0.2.4",
-    "nomocas-webutils": "^0.0.7"
+    "nomocas-webutils": "^0.0.8"
   },
   "devDependencies": {
     "assert": "^1.4.1",
