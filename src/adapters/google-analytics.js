@@ -1,33 +1,26 @@
-/* global ga */
-const gaStart = "<script>" +
-	"(function(b, o, i, l, e, r) {" +
-	"    b.GoogleAnalyticsObject = l;" +
-	"    b[l] || (b[l] =" +
-	"        function() {" +
-	"            (b[l].q = b[l].q || []).push(arguments)" +
-	"        });" +
-	"    b[l].l = +new Date;" +
-	"    e = o.createElement(i);" +
-	"    r = o.getElementsByTagName(i)[0];" +
-	"    e.src = '//www.google-analytics.com/analytics.js';" +
-	"    r.parentNode.insertBefore(e, r)" +
-	"}(window, document, 'script', 'ga'));" +
-	"ga('create', '",
-	gaEnd = "', 'auto'); ga('send', 'pageview'); </script>";
+/*
+ * @Author: Gilles Coomans
+ * @Date:   2017-07-08 12:14:31
+ * @Last Modified by:   Gilles Coomans
+ * @Last Modified time: 2017-07-08 12:30:02
+ */
 
-function gaEvent(category, type, data) {
-	if (typeof ga !== 'undefined')
-		ga('send', 'event', category, type, data);
+function gaString(key) {
+	return `
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', '${ key }', 'auto');
+ga('send', 'pageview');
+	`;
 }
 
-export default {
-	compound() {
-		return {
-			gascript(key) {
-				return this.raw(gaStart + key + gaEnd);
-			}
-		};
-	},
-	gaEvent
+export default () => {
+	return {
+		gascript(key) {
+			return this.scriptRaw(gaString(key));
+		}
+	};
 };
 

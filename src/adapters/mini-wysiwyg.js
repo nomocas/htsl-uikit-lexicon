@@ -3,12 +3,12 @@
  * @Author: gilles
  * @Date:   2017-03-22 18:49:09
  * @Last Modified by:   Gilles Coomans
- * @Last Modified time: 2017-04-26 13:11:10
+ * @Last Modified time: 2017-06-22 12:01:53
  */
 
 import plateform from 'nomocas-webutils/lib/plateform';
 import { insertHTML } from 'nomocas-webutils/lib/dom-utils';
-const Wysiwyg = require('mini-wysiwyg');
+import Wysiwyg from 'mini-wysiwyg/index';
 
 export default () => {
 	return {
@@ -24,12 +24,15 @@ export default () => {
 					wysiwyg.on('update', (e) => {
 						onUpdate(e.detail.value);
 					});
-					wysiwyg._value = insertHTML(value, node);
+					insertHTML(value, node);
+					wysiwyg._value = node.innerHTML;
 					wysiwyg.clean();
+					node.addEventListener('paste', () => setTimeout(() => wysiwyg.clean()));
 				}, (node) => {
 					node.innerHTML = '';
 					if (value) {
-						node.wysiwyg._value = insertHTML(value, node);
+						insertHTML(value, node);
+						node.wysiwyg._value = node.innerHTML;
 						node.wysiwyg.clean();
 					}
 				});
