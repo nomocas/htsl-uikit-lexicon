@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/nomocas/htsl-uikit-lexicon/compare/v0.1.2...v0.1.3) (2017-07-08)
+
+
+### Bug Fixes
+
+* **dependencies:** complete and update versions ([1d2f4a0](https://github.com/nomocas/htsl-uikit-lexicon/commit/1d2f4a0))
+* **dependency:** update nomocas-webutils to follow domutils export ([1fae7b9](https://github.com/nomocas/htsl-uikit-lexicon/commit/1fae7b9))
+* **domUtils:** follow nomocas-webutils/src/dom-utils refactoring ([3cded03](https://github.com/nomocas/htsl-uikit-lexicon/commit/3cded03))
+* **embed-video:** use temporary clean-embed-video git dependency ([cb3fbdc](https://github.com/nomocas/htsl-uikit-lexicon/commit/cb3fbdc))
+* **mini-wysiwyg:** cleaner import ([27a0c8b](https://github.com/nomocas/htsl-uikit-lexicon/commit/27a0c8b))
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/nomocas/htsl-uikit-lexicon/compare/v0.1.1...v0.1.2) (2017-07-08)
 
